@@ -1,0 +1,56 @@
+:root {
+  --color-Primary: #1386ea;
+  --color-Primary-light: #137bafdd;
+  --color-Primary-dark: #114c69;
+  --color-Primary-dark-2: #116947;
+
+  --color-Grey-light-1: #faf9f9;
+  --color-Grey-light-2: #f4f2f2;
+  --color-Grey-light-4: #ccc;
+  --color-Grey-light-3: #f0eeee;
+
+  --color-Grey-dark-1: #333;
+  --color-Grey-dark-2: #777;
+  --color-Grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.6);
+  --shadow-dark-2: 0 2rem 5rem rgba(0, 0, 0, 0.55);
+}
+
+$bp-largest: 75em; // 1200px/16px = 75em
+$bp-large: 68.75em; // 1100px/16 = 68.75em
+$bp-medium: 56.75em; // 900px/16px = 56.75em
+$bp-small: 37.5em; // 600/16px = 37.5em
+$bp-smallest: 31.25em; // 500/16px = 31.25em
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px 10rem = 100px 100rem = 1000px
+  @media only screen and(max-width:$bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--color-Grey-dark-1);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-Primary),
+    var(--color-Primary-dark-2)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100dvh;
+}
